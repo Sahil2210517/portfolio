@@ -49,6 +49,7 @@ const Navbar = () => {
                 <div className="hidden md:flex items-center gap-8">
                     <a href="#hero" className="text-sm font-medium text-slate-300 hover:text-white transition-colors">Home</a>
                     <a href="#projects" className="text-sm font-medium text-slate-300 hover:text-white transition-colors">Projects</a>
+                    <a href="#experience" className="text-sm font-medium text-slate-300 hover:text-white transition-colors">Experience</a>
                     <a href="#about" className="text-sm font-medium text-slate-300 hover:text-white transition-colors">About</a>
                     <a href="#contact" className="text-sm font-medium text-slate-300 hover:text-white transition-colors">Contact</a>
 
@@ -86,6 +87,7 @@ const Navbar = () => {
                 <div className="absolute top-full left-0 right-0 bg-black/95 backdrop-blur-xl border-b border-white/10 p-6 md:hidden flex flex-col gap-4">
                     <a href="#hero" onClick={() => setIsMenuOpen(false)} className="text-lg font-medium text-slate-300">Home</a>
                     <a href="#projects" onClick={() => setIsMenuOpen(false)} className="text-lg font-medium text-slate-300">Projects</a>
+                    <a href="#experience" onClick={() => setIsMenuOpen(false)} className="text-lg font-medium text-slate-300">Experience</a>
                     <a href="#about" onClick={() => setIsMenuOpen(false)} className="text-lg font-medium text-slate-300">About</a>
                     <a href="#contact" onClick={() => setIsMenuOpen(false)} className="text-lg font-medium text-slate-300">Contact</a>
                     <div className="h-px w-full bg-white/10 my-2"></div>
