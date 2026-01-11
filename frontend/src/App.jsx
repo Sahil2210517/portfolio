@@ -11,7 +11,6 @@ function App() {
     <ThemeProvider>
       <Router>
         <div className="min-h-screen font-sans antialiased transition-colors duration-500">
-          <ThemeToggle />
           <Routes>
             <Route path="/login" element={<LoginPage />} />
             <Route path="/signup" element={<SignupPage />} />

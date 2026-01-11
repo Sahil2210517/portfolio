@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useTheme } from '../context/ThemeContext';
-import ThemeToggle from './ThemeToggle';
 import axios from '../lib/axios';
 
 const Navbar = () => {
@@ -53,7 +52,7 @@ const Navbar = () => {
 
                     <div className="h-4 w-px bg-white/10"></div>
 
-                    <ThemeToggle />
+                    <div className="h-4 w-px bg-white/10"></div>
 
                     {localStorage.getItem('user') ? (
                         <button
@@ -95,10 +94,6 @@ const Navbar = () => {
                     <a href="#about" onClick={() => setIsMenuOpen(false)} className="text-lg font-medium text-slate-300">About</a>
                     <a href="#contact" onClick={() => setIsMenuOpen(false)} className="text-lg font-medium text-slate-300">Contact</a>
                     <div className="h-px w-full bg-white/10 my-2"></div>
-                    <div className="flex items-center justify-between">
-                        <span className="text-slate-400">Theme</span>
-                        <ThemeToggle />
-                    </div>
                     {localStorage.getItem('user') ? (
                         <button
                             onClick={handleLogout}

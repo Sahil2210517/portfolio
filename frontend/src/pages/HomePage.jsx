@@ -10,7 +10,7 @@ const HomePage = () => {
     const { theme } = useTheme();
 
     return (
-        <div className={`min-h-screen transition-colors duration-500 ${theme.bg}`}>
+        <div className="min-h-screen bg-slate-950">
             <Navbar />
 
             <main>
