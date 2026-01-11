@@ -55,12 +55,21 @@ const Navbar = () => {
 
                     <ThemeToggle />
 
-                    <button
-                        onClick={handleLogout}
-                        className="rounded-full bg-white/10 px-5 py-2 text-sm font-bold text-white transition-all hover:bg-white/20 border border-white/10 hover:border-white/20"
-                    >
-                        Sign Out
-                    </button>
+                    {localStorage.getItem('user') ? (
+                        <button
+                            onClick={handleLogout}
+                            className="rounded-full bg-white/10 px-5 py-2 text-sm font-bold text-white transition-all hover:bg-white/20 border border-white/10 hover:border-white/20"
+                        >
+                            Sign Out
+                        </button>
+                    ) : (
+                        <Link
+                            to="/login"
+                            className="rounded-full bg-blue-600 px-5 py-2 text-sm font-bold text-white transition-all hover:bg-blue-700 shadow-lg shadow-blue-500/25"
+                        >
+                            Sign In
+                        </Link>
+                    )}
                 </div>
 
                 {/* Mobile Menu Button */}
@@ -90,12 +99,22 @@ const Navbar = () => {
                         <span className="text-slate-400">Theme</span>
                         <ThemeToggle />
                     </div>
-                    <button
-                        onClick={handleLogout}
-                        className="w-full rounded-xl bg-red-500/10 px-5 py-3 text-sm font-bold text-red-400 border border-red-500/20"
-                    >
-                        Sign Out
-                    </button>
+                    {localStorage.getItem('user') ? (
+                        <button
+                            onClick={handleLogout}
+                            className="w-full rounded-xl bg-red-500/10 px-5 py-3 text-sm font-bold text-red-400 border border-red-500/20"
+                        >
+                            Sign Out
+                        </button>
+                    ) : (
+                        <Link
+                            to="/login"
+                            onClick={() => setIsMenuOpen(false)}
+                            className="text-center w-full rounded-xl bg-blue-600 px-5 py-3 text-sm font-bold text-white shadow-lg shadow-blue-500/25"
+                        >
+                            Sign In
+                        </Link>
+                    )}
                 </div>
             )}
         </nav>
