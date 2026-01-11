@@ -7,11 +7,14 @@ require('dotenv').config();
 const app = express();
 const PORT = process.env.PORT || 5000;
 
+// Essential for Render/Heroku behind proxy to handle secure cookies
+app.set('trust proxy', 1);
+
 // Middleware
 app.use(cors({
     origin: [
         "http://localhost:5173",
-        process.env.FRONTEND_URL // Allow production frontend
+        process.env.FRONTEND_URL
     ],
     credentials: true,
 }));
