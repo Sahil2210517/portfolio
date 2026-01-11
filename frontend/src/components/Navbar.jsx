@@ -34,13 +34,15 @@ const Navbar = () => {
         <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-black/50 backdrop-blur-md border-b border-white/10 py-4' : 'bg-transparent py-6'}`}>
             <div className="container mx-auto px-6 flex items-center justify-between">
                 {/* Logo */}
-                <Link to="/" className="text-2xl font-bold tracking-tighter text-white flex items-center gap-2">
-                    <div className="h-8 w-8 rounded-lg bg-gradient-to-br from-blue-500 to-cyan-400 p-1.5">
-                        <svg viewBox="0 0 24 24" fill="none" className="h-full w-full text-white" stroke="currentColor" strokeWidth="2.5">
-                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
-                        </svg>
+                <Link to="/" className="text-2xl font-black tracking-tighter text-white flex items-center gap-3 group">
+                    <div className="relative h-10 w-10 overflow-hidden rounded-xl bg-gradient-to-br from-blue-600 to-cyan-500 p-[1px] transition-transform duration-300 group-hover:scale-105 group-hover:rotate-3 shadow-lg shadow-blue-500/25">
+                        <div className="flex h-full w-full items-center justify-center rounded-xl bg-slate-950/90 text-white backdrop-blur-3xl">
+                            <span className="bg-gradient-to-br from-blue-400 to-cyan-300 bg-clip-text text-xl font-bold text-transparent">S</span>
+                        </div>
                     </div>
-                    PORTFOLIO.
+                    <span className="text-xl font-bold text-slate-200 group-hover:text-white transition-colors">
+                        Sahil<span className="text-blue-500">.</span>
+                    </span>
                 </Link>
 
                 {/* Desktop Menu */}
