@@ -17,12 +17,14 @@ const Hero = () => {
             </div>
 
             <div className="container relative z-10 px-6 text-center">
-                <div className="inline-flex items-center gap-2 rounded-full bg-white/5 border border-white/10 px-4 py-2 mb-8 backdrop-blur-xl animate-fade-in-up">
-                    <span className="relative flex h-2 w-2">
-                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-                        <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+                <div className="inline-flex items-center gap-3 mb-8 animate-fade-in-up">
+                    <span className="relative flex h-3 w-3">
+                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                        <span className="relative inline-flex rounded-full h-3 w-3 bg-blue-500"></span>
                     </span>
-                    <span className="text-sm font-medium text-slate-300">Available for hire</span>
+                    <span className="px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-sm font-medium text-slate-300 backdrop-blur-xl">
+                        Software Developer Intern @ <span className="text-white font-bold">DreamPi</span> & <span className="text-white font-bold">Satven</span>
+                    </span>
                 </div>
 
                 <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tight text-white mb-6">
