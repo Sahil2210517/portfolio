@@ -54,20 +54,13 @@ const Navbar = () => {
 
                     <div className="h-4 w-px bg-white/10"></div>
 
-                    {localStorage.getItem('user') ? (
+                    {localStorage.getItem('user') && (
                         <button
                             onClick={handleLogout}
                             className="rounded-full bg-white/10 px-5 py-2 text-sm font-bold text-white transition-all hover:bg-white/20 border border-white/10 hover:border-white/20"
                         >
                             Sign Out
                         </button>
-                    ) : (
-                        <Link
-                            to="/login"
-                            className="rounded-full bg-blue-600 px-5 py-2 text-sm font-bold text-white transition-all hover:bg-blue-700 shadow-lg shadow-blue-500/25"
-                        >
-                            Sign In
-                        </Link>
                     )}
                 </div>
 
@@ -94,21 +87,14 @@ const Navbar = () => {
                     <a href="#about" onClick={() => setIsMenuOpen(false)} className="text-lg font-medium text-slate-300">About</a>
                     <a href="#contact" onClick={() => setIsMenuOpen(false)} className="text-lg font-medium text-slate-300">Contact</a>
                     <div className="h-px w-full bg-white/10 my-2"></div>
-                    {localStorage.getItem('user') ? (
+                    <div className="h-px w-full bg-white/10 my-2"></div>
+                    {localStorage.getItem('user') && (
                         <button
                             onClick={handleLogout}
                             className="w-full rounded-xl bg-red-500/10 px-5 py-3 text-sm font-bold text-red-400 border border-red-500/20"
                         >
                             Sign Out
                         </button>
-                    ) : (
-                        <Link
-                            to="/login"
-                            onClick={() => setIsMenuOpen(false)}
-                            className="text-center w-full rounded-xl bg-blue-600 px-5 py-3 text-sm font-bold text-white shadow-lg shadow-blue-500/25"
-                        >
-                            Sign In
-                        </Link>
                     )}
                 </div>
             )}
